@@ -12,7 +12,7 @@ module VagrantHostel
 			# Parse the options
 			argv = parse_options(opts)
 
-	    puts "Hello! #{argv}"
+	    puts "Hello: this works! #{argv}"
 	    0
 		end
   end
