@@ -7,4 +7,4 @@ rescue LoadError
   raise "The Vagrant Hostel plugin must be run within Vagrant."
 end
 
-require 'hostel/plugin'
+require 'vagrant-hostel'

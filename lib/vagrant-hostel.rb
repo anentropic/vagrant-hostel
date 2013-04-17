@@ -1,5 +1,5 @@
 module VagrantHostel
-	class Hostel < Vagrant::Command::Base
+	class Hostel < Vagrant::Plugin::Base
 	  name "Hostel"
 
 	  command "hostel" do
