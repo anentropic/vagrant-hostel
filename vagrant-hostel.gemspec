@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vagrant/hostel/version'
+require 'hostel/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-hostel"
-  spec.version       = Vagrant::Hostel::VERSION
+  spec.version       = VagrantHostel::VERSION
   spec.authors       = ["Anentropic"]
   spec.email         = ["ego@anentropic.com"]
   spec.description   = %q{Vagrant plugin to allow you to manage multiple instances of chosen vms from your Vagrantfile}
