@@ -7,4 +7,6 @@ rescue LoadError
   raise "The Vagrant Hostel plugin must be run within Vagrant."
 end
 
-require 'vagrant-hostel'
+require 'vagrant-hostel/command'
+
+Vagrant.commands.register(:hostel) { VagrantHostel::Command }
