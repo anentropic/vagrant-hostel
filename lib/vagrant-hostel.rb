@@ -3,12 +3,12 @@ module VagrantHostel
     name "Hostel"
 
     command "hostel" do
-      require_relative "command"
+      require_relative "vagrant-hostel/command"
       Command
     end
   
     config "hostel" do
-      require_relative "config"
+      require_relative "vagrant-hostel/config"
       Config
     end
   end
