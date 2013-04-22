@@ -9,7 +9,7 @@ module VagrantHostel
   
     config "hostel" do
       require_relative "vagrant-hostel/config"
-      Config
+      HostelVMConfig
     end
   end
 end
