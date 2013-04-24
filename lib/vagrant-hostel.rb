@@ -12,8 +12,24 @@ module VagrantHostel
       HostelVMConfig
     end
 
-    action_hook "hostelize", :hook_name => 'config_validate' do
-      puts "HOOK! Arrgh!"
+    action_hook :echo, :environment_load do |hook|
+      puts "ENVIRONMENT LOAD"
+      mw = ::Vagrant::Action::Builder.new.tap do |b|
+        b.use VagrantHostel::EchoAction
+      end
+      hook.append(mw)
+    end
+  end
+
+  class EchoAction
+    def initialize(app, env)
+      @app = app
+    end
+
+    def call(env)
+      env[:ui].info("EchoAction before!")
+      @app.call(env)
+      env[:ui].info("EchoAction after!")
     end
   end
 end
