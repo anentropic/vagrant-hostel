@@ -1,3 +1,5 @@
+# OBSOLETE/UNFINISHED
+
 # Vagrant::Hostel
 
 TODO: Write a gem description
